@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    height: 546px;
+    width: 1530px;
+    border: solid 2px #ee7700;
+    background-image: url(../img/sincerely-media-_-hjiem5TqI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#head {
+    height: 80px;
+    width: 100%;
+    background-color: #66CCCC;
+    text-align: center;
+    position: relative;
+}
+
+#foot {
+    height: 90px;
+    width: 100%;
+    background-color: #CC9933;
+    position: relative;
+}
+
+#wrap .logGet {
+    height: 448px;
+    width: 368px;
+    position: absolute;
+    background-color: snow;
+    top: 10%;
+    right: 15%;
+}
+
+.logC input {
+    width: 100%;
+    height: 45px;
+    background-color: #ee7700;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.logGet .logD.logDtip .p1 {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 20px;
+    width: 86%;
+}
+
+#wrap .logGet .logD.logDtip {
+    width: 86%;
+    border-bottom: 1px solid #ee7700;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logGet .lgD img {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.logGet .lgD input {
+    width: 100%;
+    height: 42px;
+    text-indent: 2.5rem;
+    border-radius: 30px;
+}
+
+#wrap .logGet .lgD {
+    width: 86%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#wrap .logGet .logC {
+    width: 86%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+.role{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.role input{
+    margin: 0 0 0 30px;
+}
+
+.title {
+    font-family: "宋体";
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 使用css3的transform来实现 */
+    font-size: 36px;
+    height: 40px;
+    width: 30%;
+}
+
+.copyright {
+    font-family: "宋体";
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 使用css3的transform来实现 */
+    height: 60px;
+    width: 40%;
+    text-align: center;
+}
+
+#foot .copyright .img {
+    width: 100%;
+    height: 24px;
+    position: relative;
+}
+
+.copyright .img .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 22px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.copyright .img .icon1 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 22px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.copyright .img .icon2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 22px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#foot .copyright p {
+    height: 24px;
+    width: 100%;
+}
+.log_Tip{
+    margin: 10px;
+    padding: 10px;
+}
+.log_Tip p{
+    color: #ee7700;
+}
+.log_Tip p a{
+    color: red;
+    text-decoration: none;
+}
+.log_Tip p a:hover {
+    color: rgba(20,10,16,0.35);
+}
+
+.register{
+    width: 80%;
+    border: solid 2px #ee7700;
+    height: 450px;
+    margin: 50px auto;
+}
+.table_tip{
+    color: #ff9c1d;
+    font-size: 26px;
+    margin-left: 50px;
+    font-family: "Microsoft JhengHei Light";
+    font-weight: bold;
+}
+.table_first{
+    width: 30%;
+    text-align: right;
+    padding: 10px 50px;
+    font-family: "Microsoft YaHei UI Light";
+    font-weight: bold;
+}
+.table_second{
+    width: 30%;
+    padding: 10px 50px;
+}
+.table_second input{
+    font-size: 16px;
+    height: 26px;
+    outline-style: none ;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.table_third{
+    width: 40%;
+    padding: 10px 50px;
+}
+.register input[type="submit"] {
+    color: white;
+    height: 40px;
+    background-color: #efb43b;
+    width: 200px;
+    border-radius: 100px;
+}
+
+
+ .table11_6 table {
+     width:100%;
+     margin:15px 0;
+     border:0;
+ }
+.table11_6 th {
+    background-color:#96C7ED;
+    color:#000000
+}
+.table11_6,.table11_6 th,.table11_6 td {
+    font-size:0.95em;
+    text-align:center;
+    padding:4px;
+    border-collapse:collapse;
+}
+.table11_6 th,.table11_6 td {
+    border: 1px solid #73b4e7;
+    border-width:1px 0 1px 0;
+    border:2px inset #ffffff;
+}
+.table11_6 tr {
+    border: 1px solid #ffffff;
+}
+.table11_6 tr:nth-child(odd){
+    background-color:#dcecf9;
+}
+.table11_6 tr:nth-child(even){
+    background-color:#ffffff;
+}
