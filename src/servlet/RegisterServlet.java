@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-@WebServlet("/registerServlet")
+@WebServlet(name = "/registerServlet", urlPatterns = "/registerServlet")
 public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 1、判断用户名不重复
@@ -22,7 +22,7 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
 
         // 如果找到，即username重复了
-        if (service.findUserByname(username)){
+        if (service.findUserByname(username) != null){
             response.setContentType( "text/html;charset=utf-8");
             PrintWriter out = response.getWriter();
             out.print("<script>alert('用户名重复');location.href='register.html'</script>");

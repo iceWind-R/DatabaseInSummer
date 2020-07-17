@@ -1,27 +1,35 @@
 package domain;
 
-public class Entertainment {
+public class PersonTicket {
     private int id; // 游乐项目的id
     private String name;
     private String species;
     private double ticket;
-    private double cost;
+    private int nums;
     private String note;
-    private int ticketNums;
-    private int remaining_nums;
+    private double total;
+    private String date;
 
     @Override
     public String toString() {
-        return "Entertainment{" +
+        return "PersonTicket{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", species='" + species + '\'' +
                 ", ticket=" + ticket +
-                ", cost=" + cost +
+                ", nums=" + nums +
                 ", note='" + note + '\'' +
-                ", ticketNums=" + ticketNums +
-                ", remaining_nums=" + remaining_nums +
+                ", total=" + total +
+                ", date='" + date + '\'' +
                 '}';
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getId() {
@@ -56,12 +64,12 @@ public class Entertainment {
         this.ticket = ticket;
     }
 
-    public double getCost() {
-        return cost;
+    public int getNums() {
+        return nums;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setNums(int nums) {
+        this.nums = nums;
     }
 
     public String getNote() {
@@ -72,19 +80,11 @@ public class Entertainment {
         this.note = note;
     }
 
-    public int getTicketNums() {
-        return ticketNums;
+    public double getTotal() {
+        return total;
     }
 
-    public void setTicketNums(int ticketNums) {
-        this.ticketNums = ticketNums;
-    }
-
-    public int getRemaining_nums() {
-        return remaining_nums;
-    }
-
-    public void setRemaining_nums(int remaining_nums) {
-        this.remaining_nums = remaining_nums;
+    public void setTotal(double total) {
+        this.total = total;
     }
 }

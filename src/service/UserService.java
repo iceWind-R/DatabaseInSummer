@@ -13,7 +13,7 @@ public class UserService {
         return dao.findAll();
     }
 
-    public boolean findUserByname(String username) {
+    public User findUserByname(String username) {
 
         return dao.findUserByname(username);
     }

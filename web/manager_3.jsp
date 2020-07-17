@@ -1,5 +1,6 @@
 <%@ page import="domain.User" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="domain.Manager_3" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 管理员后台查看所有用户的信息表 -->
 
@@ -22,29 +23,36 @@
 
 <div class="wrap" id="wrap">
     <div class="register">
-        <div style="font-size: 30px;text-align: center; color: #2aabd2;padding-top: 10px;padding-bottom: 10px">
-            <a href="toEditUserServlet?flag=1"  style="text-decoration: none;">添加用户信息</a>
-        </div>
         <div style="float: right;margin: 5px">
             <a class="btn btn-primary" onclick="JavaScript:history.go(-1)">返回</a>
         </div>
         <table class="table11_6"; width="100%" style="font-size: 16px">
             <tr>
-                <th>用户编号</th>
-                <th>用户账号</th>
-                <th>用户密码</th>
+                <th>购票日期</th>
+                <th>游客ID</th>
+                <th>游客名</th>
+                <th>项目ID</th>
+                <th>项目名</th>
+                <th>门票单价</th>
+                <th>购票数量</th>
+                <th>总计</th>
                 <th>操作</th>
             </tr>
             <%
                 @SuppressWarnings("unchecked")
-                ArrayList<User> list = (ArrayList<User>) request.getAttribute("users");
-                for (User bi : list) {
-                    int id = bi.getId();
+                ArrayList<Manager_3> list = (ArrayList<Manager_3>) request.getAttribute("lists");
+                for (Manager_3 bi : list) {
+                    int id = bi.getUserid();
             %>
             <tr>
+                <td><%=bi.getDate()%></td>
                 <td><%=id%></td>
                 <td><%=bi.getUsername()%></td>
-                <td><%=bi.getPassword()%></td>
+                <td><%=bi.getEnid()%></td>
+                <td><%=bi.getName()%></td>
+                <td><%=bi.getTicket()%></td>
+                <td><%=bi.getNums()%></td>
+                <td><%=bi.getTotal()%></td>
                 <td><a href="toEditUserServlet?id=<%=id%>&flag=2">修改/查看</a> &nbsp;&nbsp;&nbsp;
                     <a href="deleteUserServlet?id=<%=id%>" onclick="if(confirm('确认删除吗？')==false)return false;">删除</a></td>
             </tr>

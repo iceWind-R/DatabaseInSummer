@@ -1,26 +1,25 @@
 package domain;
 
-public class Entertainment {
-    private int id; // 游乐项目的id
+// 展示在index.jsp 的门票信息列表
+public class UserTicketList {
+    private int id;
     private String name;
     private String species;
     private double ticket;
-    private double cost;
+    private int total;
+    private int remaining;
     private String note;
-    private int ticketNums;
-    private int remaining_nums;
 
     @Override
     public String toString() {
-        return "Entertainment{" +
+        return "UserTicketList{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", species='" + species + '\'' +
                 ", ticket=" + ticket +
-                ", cost=" + cost +
+                ", total=" + total +
+                ", remaining=" + remaining +
                 ", note='" + note + '\'' +
-                ", ticketNums=" + ticketNums +
-                ", remaining_nums=" + remaining_nums +
                 '}';
     }
 
@@ -56,12 +55,20 @@ public class Entertainment {
         this.ticket = ticket;
     }
 
-    public double getCost() {
-        return cost;
+    public int getTotal() {
+        return total;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getRemaining() {
+        return remaining;
+    }
+
+    public void setRemaining(int remaining) {
+        this.remaining = remaining;
     }
 
     public String getNote() {
@@ -70,21 +77,5 @@ public class Entertainment {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public int getTicketNums() {
-        return ticketNums;
-    }
-
-    public void setTicketNums(int ticketNums) {
-        this.ticketNums = ticketNums;
-    }
-
-    public int getRemaining_nums() {
-        return remaining_nums;
-    }
-
-    public void setRemaining_nums(int remaining_nums) {
-        this.remaining_nums = remaining_nums;
     }
 }

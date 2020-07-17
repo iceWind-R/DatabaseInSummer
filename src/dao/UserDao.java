@@ -19,15 +19,15 @@ public class UserDao {
         return users;
     }
 
-    public boolean findUserByname(String username) {
+    public User findUserByname(String username) {
         String sql = "select * from user where username = ?";
         User user = null;
         try {
             user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username);
-            return true;
+            return user;
         }
         catch (Exception e){
-            return false;
+            return null;
         }
     }
 
@@ -68,19 +68,5 @@ public class UserDao {
         catch (Exception e){
             return false;
         }
-    }
-}
-
-class Test{
-    public static void main(String[] args) {
-        UserDao dao = new UserDao();
-        User user = new User();
-        user.setId(5);
-        user.setUsername("test");
-        user.setPassword("test");
-        user.setEmail("test");
-        user.setPhone("test");
-        if(dao.findUserBynameAndPwd("dongao","dongao"))
-            System.out.println("1");
     }
 }

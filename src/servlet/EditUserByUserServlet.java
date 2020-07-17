@@ -1,7 +1,9 @@
 package servlet;
 
 import domain.User;
+import domain.UserTicketList;
 import service.UserService;
+import service.UserTicketListService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
-@WebServlet(name = "/editUserServlet", urlPatterns = "/editUserServlet")
-public class EditUserServlet extends HttpServlet {
+@WebServlet(name = "/editUserByUserServlet", urlPatterns = "/editUserByUserServlet")
+public class EditUserByUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String username = request.getParameter("username");
@@ -30,9 +33,20 @@ public class EditUserServlet extends HttpServlet {
         UserService service = new UserService();
         service.updateUser(user);
 
+
+
+        UserTicketListService service1 = new UserTicketListService();
+        List<UserTicketList> lists = service1.findAllTicket();
+
+        request.setAttribute("lists",lists);
+
+
         response.setContentType( "text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-        out.print("<script>alert('修改信息成功');location.href='userListServlet'</script>");
+        out.print("<script>alert('修改个人信息成功');</script>");
+
+        request.getRequestDispatcher("/index.jsp").forward(request,response);
+
 
     }
 

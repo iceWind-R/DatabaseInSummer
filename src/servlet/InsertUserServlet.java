@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-@WebServlet("/insertUserServlet")
+@WebServlet(name = "/insertUserServlet", urlPatterns ="/insertUserServlet" )
 public class InsertUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.设置编码
