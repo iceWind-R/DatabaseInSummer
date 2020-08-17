@@ -1,5 +1,6 @@
 package dao;
 
+import domain.Entertainment;
 import domain.User;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -68,5 +69,14 @@ public class UserDao {
         catch (Exception e){
             return false;
         }
+    }
+}
+class Test{
+    public static void main(String[] args) {
+        UserDao dao = new UserDao();
+        if (dao.findUserBynameAndPwd("dongao","dongao"))
+            System.out.println("1");
+        else
+            System.out.println("2");
     }
 }

@@ -41,7 +41,7 @@ public class TicketBuyDao {
         }
 
         if (ticketBuy == null){ // 说明没查到，即不存在，此时insert语句
-            sql = "insert into ticketBuy VALUES (?,?,?,?)";
+            sql = "insert into ticketbuy VALUES (?,?,?,?)";
             template.update(sql, userid,enid,date,nums);
         } else { // 执行update语句
             sql = "update ticketbuy set nums = nums + ? where userid=? and enid = ? and date=?";

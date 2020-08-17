@@ -8,7 +8,7 @@
     height: 546px;
     width: 1530px;
     border: solid 2px #ee7700;
-    background-image: url(/img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
