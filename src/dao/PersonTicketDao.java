@@ -24,5 +24,8 @@ public class PersonTicketDao {
     public void del(int userid, int enid, String date) {
         String sql = "delete from ticketBuy where userid=? and enid=? and date=?";
         template.update(sql, userid, enid, date);
+
+        // *************删除订单信息后对利润的改变***************
+
     }
 }

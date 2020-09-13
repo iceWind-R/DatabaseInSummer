@@ -4,7 +4,7 @@ public class Profits {
     private String date;
     private int enid;
     private String name;
-    private double profit;
+    private int nums;
 
     @Override
     public String toString() {
@@ -12,9 +12,20 @@ public class Profits {
                 "date='" + date + '\'' +
                 ", enid=" + enid +
                 ", name='" + name + '\'' +
+                ", nums=" + nums +
                 ", profit=" + profit +
                 '}';
     }
+
+    public int getNums() {
+        return nums;
+    }
+
+    public void setNums(int nums) {
+        this.nums = nums;
+    }
+
+    private double profit;
 
     public String getDate() {
         return date;

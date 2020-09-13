@@ -27,23 +27,6 @@
     <div class="container">
         <h3 style="text-align: center">游乐场门票列表</h3>
 
-        <div style="float: left;">
-
-            <form class="form-inline" action="queryServlet">
-                <div class="form-group">
-                    <label for="exampleInputName2" style="color: #95fcff;">娱乐名</label>
-                    <input type="text" class="form-control" id="exampleInputName2" name="name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputName3" style="color: #ffe4c2;">娱乐种类</label>
-                    <input type="text" class="form-control" id="exampleInputName3" name="type">
-                </div>
-                <button type="submit" class="btn btn-default">查询</button>
-            </form>
-
-        </div>
-
-
         <div style="float:right ;margin: 5px;">
             <span style="color:#FFFFFF;">欢迎您，<%=((User)session.getAttribute("user")).getUsername()%>！&nbsp;&nbsp;&nbsp;</span>
             <a class="btn btn-primary" href="login.html">退出登录</a>

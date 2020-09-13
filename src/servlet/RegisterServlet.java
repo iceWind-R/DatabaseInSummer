@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
             if (service.insertUser(user)){
                 response.setContentType( "text/html;charset=utf-8");
                 PrintWriter out = response.getWriter();
-                out.print("<script>alert('注册成功');location.href='register.html'</script>");
+                out.print("<script>alert('注册成功');location.href='login.html'</script>");
             }
         }
 

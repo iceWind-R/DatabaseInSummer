@@ -15,6 +15,11 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
+<style>
+    label{
+        color: white;
+    }
+</style>
 <body>
 <div class="header" id="head">
     <div class="title">图书管理网站</div>

@@ -32,6 +32,7 @@
                 <th>日期</th>
                 <th>项目ID</th>
                 <th>项目名</th>
+                <th>已售数量</th>
                 <th>利润</th>
                 <th>操作</th>
             </tr>
@@ -45,6 +46,7 @@
                 <td><%=bi.getDate()%></td>
                 <td><%=id%></td>
                 <td><%=bi.getName()%></td>
+                <td><%=bi.getNums()%></td>
                 <td><%=bi.getProfit()%></td>
                 <td><a href="toEditUserServlet?id=<%=id%>&flag=2">修改/查看</a> &nbsp;&nbsp;&nbsp;
                     <a href="deleteUserServlet?id=<%=id%>" onclick="if(confirm('确认删除吗？')==false)return false;">删除</a></td>

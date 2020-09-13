@@ -18,14 +18,20 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        System.out.println(request.getParameter("yzm") + " = = = " + session.getAttribute("yzm").toString());
 
         if (request.getParameter("yzm") != null) {
             if (request.getParameter("yzm").equals(session.getAttribute("yzm").toString()))
-                System.out.println("111");
+                System.out.println("验证码输入正确");
             else
-                System.out.println(222);
+            {
+                System.out.println("验证码输入错误");
+                response.setContentType( "text/html;charset=utf-8");
+                PrintWriter out = response.getWriter();
+                out.print("<script>alert('验证码错误');location.href='login.html'</script>");
+            }
         }else {
-            System.out.println(333);
+            System.out.println("验证码为空");
         }
 
         int role = Integer.parseInt(request.getParameter("role"));

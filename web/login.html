@@ -6,6 +6,29 @@
     <link rel="stylesheet" href="css/01.css" type="text/css">
 </head>
 <script>
+    /**
+     * 点击超链接或图片，需要换一张
+     * 给超链接和图片绑定单击事件
+     * 重新设置图片的src属性值
+     */
+    window.onload=function () {
+        //获取图片对象
+        let img = document.getElementById("checkCode");
+        //绑定单击事件
+        img.onclick=function () {
+            /**
+             * 因为浏览器会有默认缓存，如果路径不变，只会访问缓存，所以加date改变参数，保证每次都不同
+             * @type {number}
+             */
+                //加时间戳
+            let date=new Date().getTime();
+            img.src="/yzm";
+        }
+    }
+</script>
+
+
+<script>
     function checkForm() {
         var uvalue = document.getElementById("username").value;
         if (uvalue == "") {
@@ -42,9 +65,9 @@
             </div>
             <div class="lgD">
                 <img src="img/logPwd.png" width="20px" height="20px" alt="验证码"/>
-                <input type="text" placeholder="输入验证码" name="verify" style="width: 60%;"/>
-                <img src="yzm" width="100px" height="40px" alt="验证码" style="margin-left: 200px"
-                     onclick=""/>
+                <input type="text" placeholder="输入验证码" name="yzm" style="width: 60%;"/>
+                <img src="yzm" id="checkCode" width="100px" height="40px" alt="验证码" style="margin-left: 200px"
+                     />
             </div>
             <div class="role">
                 <input type="radio" name="role" value="1" checked>普通用户

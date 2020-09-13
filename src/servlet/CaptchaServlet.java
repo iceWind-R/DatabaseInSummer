@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
-@WebServlet("/yzm")
+@WebServlet(name = "/yzm", urlPatterns = "/yzm")
 public class CaptchaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -20,7 +20,7 @@ public class CaptchaServlet extends HttpServlet {
         response.setHeader("Cache-Control", "no-cache");
         response.setDateHeader("Expires", 0);
         //设置响应类型
-        response.setContentType("image/jpeg");
+       // response.setContentType("image/jpeg");
         //定义图片宽高
         int width = 60;
         int height = 20;
@@ -28,14 +28,16 @@ public class CaptchaServlet extends HttpServlet {
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         //使用缓冲区图片创建 图形对象以用于绘制验证码
         Graphics g = img.getGraphics();
+
+        Random random = new Random();
+
         //设置画笔颜色为黄色，后续画矩阵，相当于设置图形背景颜色为黄色
-        g.setColor(new Color(255, 255, 0));
+        g.setColor(new Color(255, 255,0));
         g.fillRect(0, 0, width, height);
         //设置字体
         g.setFont(new Font("微软雅黑", Font.ITALIC, 18));
         //定义空字符串，以便后续连接
         String srand = "";
-        Random random = new Random();
         for (int i = 0; i < 4; i++) {
             String rand = String.valueOf(random.nextInt(10));
             srand += rand;

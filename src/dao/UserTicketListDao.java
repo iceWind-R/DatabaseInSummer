@@ -23,9 +23,26 @@ public class UserTicketListDao {
         }
     }
 
+    public List<UserTicketList> findTicketByUser(String name, String type) {
+        if (name.equals(""))
+            name = "/";
+        if (type.equals(""))
+            type = "/";
+        String sql = "select id,name,species,ticket,ticketNums total,ticketNums-SUM(nums) remaining,note " +
+                "from entertainment E join ticketbuy T on E.id=T.enid where name LIKE '%"+ name +"%' OR species LIKE '%"+ type +"%' GROUP BY id";
+        List<UserTicketList> lists = null;
+        try {
+            lists = template.query(sql, new BeanPropertyRowMapper<UserTicketList>(UserTicketList.class));
+            return lists;
+        }
+        catch (Exception e){
+            return null;
+        }
+    }
+
     public static void main(String[] args) {
         UserTicketListDao dao = new UserTicketListDao();
-        List<UserTicketList> all = dao.findAllTicket();
+        List<UserTicketList> all = dao.findTicketByUser("摩", "惊险");
         for (int i = 0 ;i<all.size();i++)
             System.out.println(all.get(i));
     }

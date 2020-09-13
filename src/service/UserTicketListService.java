@@ -12,4 +12,8 @@ public class UserTicketListService {
     public List<UserTicketList> findAllTicket() {
         return dao.findAllTicket();
     }
+
+    public List<UserTicketList> findTicketByUser(String name, String type) {
+        return dao.findTicketByUser(name, type);
+    }
 }
